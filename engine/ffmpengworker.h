@@ -5,24 +5,29 @@
 #include <QPixmap>
 #include <QList>
 #include <QImage>
+#include <QtConcurrent>
 
 class FFmpengWorker : public QObject
 {
     Q_OBJECT
 public:
     static FFmpengWorker*       instance();
+    explicit                    FFmpengWorker(QObject *parent = 0);
+
 
     static QList<QPixmap>*      getScreenCaps(QString fileUrl);
     void                        displayToScreen(QString fileUrl);
 
 
 signals:
-    void                        displayScreenUpdate(QPixmap *pixmap);
+    void                        displayScreenUpdate(QImage);
+    void                        displayFinished();
 
 public slots:
 private:
-    explicit                    FFmpengWorker(QObject *parent = 0);
-    QPixmap*                    m_displayPixmap = NULL;
+
+
+//    QPixmap*                    m_displayPixmap = NULL;
 };
 
 #endif // FFMPENGWORKER_H

@@ -5,6 +5,7 @@
 #include <QVBoxLayout>
 #include <QLabel>
 #include "../engine/ffmpengworker.h"
+#include <QtConcurrent>
 
 class Widget : public QWidget
 {
@@ -13,6 +14,15 @@ class Widget : public QWidget
 public:
     Widget(QWidget *parent = 0);
     ~Widget();
+    QLabel *m_label;
+    QVBoxLayout *m_layout;
+    FFmpengWorker *m_ffmpegWorker;
+
+public slots:
+    void onUpdateScreen(QImage img);
+    void onDisplayFinished();
+
+private:
 };
 
 #endif // WIDGET_H
