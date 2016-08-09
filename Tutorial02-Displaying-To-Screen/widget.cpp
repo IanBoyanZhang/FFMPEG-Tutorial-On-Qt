@@ -1,11 +1,4 @@
 #include "widget.h"
-extern "C"
-{
-#include <libavformat/avformat.h>
-#include <libavcodec/avcodec.h>
-#include <libavutil/pixfmt.h>
-#include <libswscale/swscale.h>
-}
 
 Widget::Widget(QWidget *parent)
     : QWidget(parent)
