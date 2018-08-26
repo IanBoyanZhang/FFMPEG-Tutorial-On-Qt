@@ -1,7 +1,7 @@
 
 HEADERS += \
-    $$PWD/ffmpengworker.h
+    $$PWD/ffmpegworker.h
 
 SOURCES += \
-    $$PWD/ffmpengworker.cpp
+    $$PWD/ffmpegworker.cpp
 

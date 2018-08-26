@@ -1,4 +1,4 @@
-#include "ffmpengworker.h"
+#include "ffmpegworker.h"
 #include <QDebug>
 //#ifndef INT64_C
 //#define INT64_C(c) (c ## LL)
